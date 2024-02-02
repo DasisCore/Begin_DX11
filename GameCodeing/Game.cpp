@@ -23,6 +23,7 @@ void Game::Init(HWND _hwnd)
 
 void Game::Update()
 {
+
 }
 
 void Game::Render()
