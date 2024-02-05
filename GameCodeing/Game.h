@@ -29,6 +29,10 @@ private:
 	void CreateVS();
 	void CreatePS();
 
+	void CreateSRV(); // shader resource view
+
+	void CreateConstantBuffer();
+
 	void LoadShaderFromFile(const wstring& path, const string& name, const string& version, ComPtr<ID3DBlob>& blob);
 
 
@@ -43,7 +47,7 @@ private:
 	ComPtr<ID3D11DeviceContext> _deviceContext = nullptr;
 	ComPtr<IDXGISwapChain> _swapChain = nullptr;
 
-	// RTV
+	// RTV  => Render Target View
 	ComPtr<ID3D11RenderTargetView> _renderTargetView;
 
 	// Mics
@@ -51,10 +55,13 @@ private:
 	float _clearColor[4] = { 0.f, 0.f, 0.f, 0.f };
 
 private:
-	// Geometry
+	// Geometry -> 언리얼에서는 메쉬의 정보를 나타냄. 
 	vector<Vertex> _vertices;
 	ComPtr<ID3D11Buffer> _vertexBuffer = nullptr;
+	vector<uint32> _indices;
+	ComPtr<ID3D11Buffer> _indexBuffer = nullptr;
 	ComPtr<ID3D11InputLayout> _inputLayout = nullptr;
+
 
 	// VS
 	ComPtr<ID3D11VertexShader> _vertexShader = nullptr;
@@ -65,6 +72,13 @@ private:
 	ComPtr<ID3DBlob> _psBlob = nullptr;
 
 
+	// SRV shader resource view
+	ComPtr<ID3D11ShaderResourceView> _shaderResourceView = nullptr;
+
+
+private:
+	TransformData _transformData;
+	ComPtr<ID3D11Buffer> _constantBuffer;
 
 
 
