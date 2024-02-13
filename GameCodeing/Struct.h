@@ -15,6 +15,9 @@ struct Vertex
 // Vec3는 float가 3개인 12바이트 자료형이므로, 더미 float를 하나 추가한다.
 struct TransformData
 {
-	Vec3 offset;
-	float dummy;
+	Matrix matWorld = Matrix::Identity;
+	Matrix matView = Matrix::Identity;
+	Matrix matProjection = Matrix::Identity;
+
+
 };
