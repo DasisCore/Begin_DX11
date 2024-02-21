@@ -144,7 +144,9 @@
     <ClInclude Include="framework.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCodeing.h" />
+    <ClInclude Include="GeometryHelper.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="Geometry.h" />
     <ClInclude Include="IndexBuffer.h" />
     <ClInclude Include="InputLayout.h" />
     <ClInclude Include="pch.h" />
@@ -155,11 +157,14 @@
     <ClInclude Include="Types.h" />
     <ClInclude Include="Values.h" />
     <ClInclude Include="VertexBuffer.h" />
+    <ClInclude Include="VertexData.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCodeing.cpp" />
+    <ClCompile Include="GeometryHelper.cpp" />
     <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="InputLayout.cpp" />
     <ClCompile Include="pch.cpp">
@@ -168,6 +173,7 @@
     </ClCompile>
     <ClCompile Include="SimpleMath.cpp" />
     <ClCompile Include="VertexBuffer.cpp" />
+    <ClCompile Include="VertexData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCodeing.rc" />

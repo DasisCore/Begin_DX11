@@ -41,20 +41,18 @@ private:
 
 private:
 	// Geometry -> 언리얼에서는 메쉬의 정보를 나타냄. 
-	vector<Vertex> _vertices;
-	shared_ptr<VertexBuffer> _vertexBuffer;
-	//ComPtr<ID3D11Buffer> _vertexBuffer = nullptr;
+	//vector<Vertex> _vertices;
+	//vector<uint32> _indices;
 
-	vector<uint32> _indices;
+	shared_ptr<Geometry<VertexTextureData>> _geometry;
+
+	shared_ptr<VertexBuffer> _vertexBuffer;
 	shared_ptr<IndexBuffer> _indexBuffer;
-	//ComPtr<ID3D11Buffer> _indexBuffer = nullptr;
-	//ComPtr<ID3D11InputLayout> _inputLayout = nullptr;
 	shared_ptr<InputLayout> _inputLayout;
 
 	// VS
 	ComPtr<ID3D11VertexShader> _vertexShader = nullptr;
 	ComPtr<ID3DBlob> _vsBlob = nullptr;
-
 
 	// RS
 	ComPtr<ID3D11RasterizerState> _rasterizerState = nullptr;
