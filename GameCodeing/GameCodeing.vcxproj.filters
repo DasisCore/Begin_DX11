@@ -36,9 +36,6 @@
     <Filter Include="소스 파일\00. Engine\pipeline\02. VertexShader">
       <UniqueIdentifier>{ab52b590-a572-4fb6-8641-9c8f91f0204e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\00. Engine\pipeline\03. Resterizer">
-      <UniqueIdentifier>{5f83b7b6-4fa7-4823-bfed-4a6826aed878}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\00. Engine\pipeline\04. PixelShader">
       <UniqueIdentifier>{3ce23a4c-7d59-4023-a327-705375e1d6a3}</UniqueIdentifier>
     </Filter>
@@ -47,6 +44,9 @@
     </Filter>
     <Filter Include="소스 파일\00. Engine\pipeline\01. InputAssembler">
       <UniqueIdentifier>{0cbcf397-b38a-4e92-b76d-6dbc9dd1b234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\00. Engine\pipeline\03. Rasterizer">
+      <UniqueIdentifier>{5f83b7b6-4fa7-4823-bfed-4a6826aed878}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +110,18 @@
     <ClInclude Include="Texture.h">
       <Filter>소스 파일\00. Engine\pipeline\04. PixelShader</Filter>
     </ClInclude>
+    <ClInclude Include="RasterizerState.h">
+      <Filter>소스 파일\00. Engine\pipeline\03. Rasterizer</Filter>
+    </ClInclude>
+    <ClInclude Include="SamplerState.h">
+      <Filter>소스 파일\00. Engine\pipeline\04. PixelShader</Filter>
+    </ClInclude>
+    <ClInclude Include="BlendState.h">
+      <Filter>소스 파일\00. Engine\pipeline\05. OutputMerger</Filter>
+    </ClInclude>
+    <ClInclude Include="Pipeline.h">
+      <Filter>소스 파일\00. Engine\pipeline</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCodeing.rc">
@@ -166,6 +178,18 @@
     </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>소스 파일\00. Engine\pipeline\04. PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="RasterizerState.cpp">
+      <Filter>소스 파일\00. Engine\pipeline\03. Rasterizer</Filter>
+    </ClCompile>
+    <ClCompile Include="SamplerState.cpp">
+      <Filter>소스 파일\00. Engine\pipeline\04. PixelShader</Filter>
+    </ClCompile>
+    <ClCompile Include="BlendState.cpp">
+      <Filter>소스 파일\00. Engine\pipeline\05. OutputMerger</Filter>
+    </ClCompile>
+    <ClCompile Include="Pipeline.cpp">
+      <Filter>소스 파일\00. Engine\pipeline</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

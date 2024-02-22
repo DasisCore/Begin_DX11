@@ -58,3 +58,8 @@ using namespace Microsoft::WRL;
 #include "ConstantBuffer.h"
 
 #include "Texture.h"
+
+#include "RasterizerState.h"
+#include "SamplerState.h"
+#include "BlendState.h"
+#include "Pipeline.h"

@@ -9,18 +9,12 @@ private:
 	// uint32 _width = 0;
 	// uint32 _height = 0;
 	shared_ptr<Graphics> _graphics;
-
+	shared_ptr<Pipeline> _pipeline;
 
 public:
 	void Init(HWND _hwnd);
 	void Update();
 	void Render();
-
-private:
-	void CreateRasterizerState();
-
-	void CreateSamplerState();
-	void CreateBlendState();
 
 private:
 	// Geometry -> 언리얼에서는 메쉬의 정보를 나타냄. 
@@ -34,7 +28,7 @@ private:
 	shared_ptr<VertexShader> _vertexShader;
 
 	// RS
-	ComPtr<ID3D11RasterizerState> _rasterizerState = nullptr;
+	shared_ptr<RasterizerState> _rasterizerState;
 
 	// PS
 	shared_ptr<PixelShader> _pixelShader;
@@ -42,9 +36,8 @@ private:
 	// SRV - shader resource view
 	shared_ptr<Texture> _texture1;
 	
-	ComPtr<ID3D11SamplerState> _samplerState = nullptr;
-	ComPtr<ID3D11BlendState> _blendState = nullptr;
-
+	shared_ptr<SamplerState> _samplerState;
+	shared_ptr<BlendState> _blendState;
 
 
 private:
