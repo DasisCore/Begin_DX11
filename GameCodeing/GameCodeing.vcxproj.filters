@@ -48,6 +48,9 @@
     <Filter Include="소스 파일\00. Engine\pipeline\03. Rasterizer">
       <UniqueIdentifier>{5f83b7b6-4fa7-4823-bfed-4a6826aed878}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\00. Engine\GameObject">
+      <UniqueIdentifier>{7149e61e-3f90-4015-902d-f0ac75f51061}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameCodeing.h">
@@ -122,6 +125,9 @@
     <ClInclude Include="Pipeline.h">
       <Filter>소스 파일\00. Engine\pipeline</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>소스 파일\00. Engine\GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameCodeing.rc">
@@ -190,6 +196,9 @@
     </ClCompile>
     <ClCompile Include="Pipeline.cpp">
       <Filter>소스 파일\00. Engine\pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>소스 파일\00. Engine\GameObject</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
