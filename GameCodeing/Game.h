@@ -11,7 +11,9 @@ private:
 	shared_ptr<Graphics> _graphics;
 	shared_ptr<Pipeline> _pipeline;
 
-	shared_ptr<GameObject> _gameObject;
+	// Temp
+	shared_ptr<GameObject> _monster;
+	shared_ptr<GameObject> _camera;
 
 public:
 	void Init(HWND _hwnd);
