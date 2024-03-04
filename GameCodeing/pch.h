@@ -45,8 +45,12 @@ using namespace Microsoft::WRL;
 
 #define CHECK(p) assert(SUCCEEDED(p))
 
-#define		GAME	GGame
-#define		SCENE	GAME->GetSceneManager()
+#define		GAME		GGame
+#define		SCENE		GAME->GetSceneManager()
+#define		TIME		GAME->GetTimeManager()
+#define		INPUT		GAME->GetInputManager()
+#define		RESOURCES	GAME->GetResourceManager()
+	
 
 
 // Engine
@@ -59,7 +63,7 @@ using namespace Microsoft::WRL;
 #include "GeometryHelper.h"
 #include "VertexData.h"
 
-#include "Shader.h"
+#include "ShaderBase.h"
 #include "ConstantBuffer.h"
 
 #include "Texture.h"
