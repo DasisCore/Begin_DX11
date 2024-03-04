@@ -2,26 +2,34 @@
 
 #include "Graphics.h"
 #include "GameObject.h"
+#include "Pipeline.h"
+
+class SceneManager;
 
 class Game
 {
-private:
-	HWND _hWnd;
+public:
+	Game();
+	~Game();
 
-	shared_ptr<Graphics> _graphics;
-	shared_ptr<Pipeline> _pipeline;
-
-	// Temp
-	shared_ptr<GameObject> _monster;
-	shared_ptr<GameObject> _camera;
 
 public:
 	void Init(HWND _hwnd);
 	void Update();
 	void Render();
 
-public:
-	Game();
-	~Game();
+	shared_ptr<SceneManager> GetSceneManager() { return _scene; }
+	shared_ptr<Pipeline> GetPipeline() { return _pipeline; }
+
+private:
+	HWND _hWnd;
+
+	shared_ptr<Graphics> _graphics;
+	shared_ptr<Pipeline> _pipeline;
+
+private:
+	shared_ptr<SceneManager> _scene;
 };
 
+
+extern unique_ptr<Game> GGame;

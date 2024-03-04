@@ -34,7 +34,7 @@ void Camera::UpdateMatrix()
 	}
 	else if (_type == ProjectionType::Orthographic)
 	{
-		S_MatProjection = ::XMMatrixOrthographicLH(800, 600, 0.f, 1.f);
+		S_MatProjection = ::XMMatrixOrthographicLH(8, 6, 0.f, 1.f);
 	}
 
 }
