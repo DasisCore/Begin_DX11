@@ -18,7 +18,8 @@ void Transform::Update()
 {
 }
 
-Vec3 ToEulerAngles(Quaternion q) {
+Vec3 ToEulerAngles(Quaternion q)
+{
 	Vec3 angles;
 
 	// roll (x-axis rotation)
@@ -41,7 +42,7 @@ Vec3 ToEulerAngles(Quaternion q) {
 
 void Transform::UpdateTransform()
 {
-	Matrix matScale = Matrix::CreateScale(_localScale / 3);
+	Matrix matScale = Matrix::CreateScale(_localScale);
 	Matrix matRotation = Matrix::CreateRotationX(_localRotation.x);
 	matRotation *= Matrix::CreateRotationY(_localRotation.y);
 	matRotation *= Matrix::CreateRotationZ(_localRotation.z);

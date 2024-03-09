@@ -13,6 +13,7 @@ public:
 private:
 	void PushCameraData();
 	void PushTransformData();
+	void PushAnimationData();
 
 	void GatherRenderableObjects();
 	void RenderObjects();
@@ -33,6 +34,9 @@ private:
 	shared_ptr<ConstantBuffer<TransformData>> _transformBuffer;
 
 	// Animation
+	AnimationData _animationData;
+	shared_ptr<ConstantBuffer<AnimationData>> _animationBuffer;
+
 
 private:
 	shared_ptr<RasterizerState> _rasterizerState;
